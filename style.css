@@ -1,8 +1,6 @@
 /*CSS Reset / Normalize*/
 /* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
 en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
 
 :root {
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
@@ -14,6 +12,8 @@ coloque nas sessões indicadas*/
     --cor-de-fundo2: rgb(247, 214, 224);
     --cor-de-detalles: rgb(178, 247, 239);
 }
+
+/*Mobile first*/
 
 body {
     box-sizing: border-box;
@@ -78,7 +78,6 @@ section.menu {
 
 .menu__header img {
     flex-shrink: 0;
-    /*  Evita que la imagen se reduzca */
 }
 
 .menu__list {
@@ -86,8 +85,6 @@ section.menu {
 }
 
 /*Sección Title*/
-
-section.title {}
 
 .title__profile {
     width: 30%;
@@ -121,7 +118,6 @@ section.title {}
 section.about,
 .academic {
     background-color: var(--cor-de-fundo2);
-
 }
 
 .about__container {
@@ -174,11 +170,6 @@ section.about,
     -webkit-filter: opacity(50%);
 }
 
-/* .skills__box img{
-    filter:grayscale(100%);
-    -webkit-filter:grayscale(100%);
-} */
-
 .hobbies__box ul,
 .skills__box ul {
     margin: 0;
@@ -201,12 +192,7 @@ section.about,
 
 .academic__title {
     text-align: center;
-
 }
-
-.academic__courses {}
-
-.academic__courses__box {}
 
 .academic__courses__list {
     margin: 0;
@@ -343,25 +329,8 @@ section.footer {
     margin: 5px;
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
 /*Tablet*/
 @media (min-width: 768px) {
-
-    /* Menú */
-
-    /*title*/
-
-    /*Skills*/
-
-    /*Hobbies*/
-
-    /*Formación Académica*/
-
-    /*Experiencia Profesional*/
-
     section {
         padding: 0 40px;
     }
@@ -369,7 +338,6 @@ Utiliza las referencias de los breakpoints @media abajo */
     .title__div {
         display: flex;
         flex-direction: row-reverse;
-        /* Alinea horizontalmente para tabletas */
         gap: 15px;
     }
 
@@ -418,27 +386,8 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
 }
 
-/*Mobile*/
+/*Desktop*/
 @media (min-width: 1024px) {
-
-    /*Menu*/
-
-    /*Titulo*/
-
-    /*Sección sobre mi*/
-
-    /*Skills*/
-
-    /*Hobbies*/
-
-    /*Formación Académica*/
-
-    /*Experiencia Profesional*/
-
-    /*Contacto*/
-
-    /*Footer*/
-
     section {
         padding: 0 120px;
     }
@@ -471,17 +420,11 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     .experience__box {
         display: flex;
-        /* Disposición en fila */
         flex-direction: row;
-        /* Alineación horizontal */
         align-items: center;
-        /* Alinea verticalmente */
         justify-content: space-between;
-        /* Espacio entre elementos */
         gap: 20px;
-        /* Espacio entre elementos */
         padding: 20px;
-        /* Espacio interno */
     }
 
     .experience__box:nth-child(3),
@@ -492,69 +435,52 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     .experience__img {
         flex: 0 0 60%;
-        /* La imagen ocupa 60% del ancho, sin flexibilidad para crecer o achicarse */
         max-width: 60%;
-        /* Máximo 60% del ancho */
         height: auto;
-        /* Mantiene la relación de aspecto */
-
-
-
     }
 
     .experience__info {
         flex: 1;
-        /* El texto ocupa el espacio restante */
     }
 
     .experience__title {
         font-size: 1.5rem;
-        /* Tamaño del título */
         margin: 0;
-        /* Sin margen */
     }
 
     .experience__text {
         font-size: 1rem;
-        /* Tamaño del texto */
     }
 
     .experience__description {
         margin-top: 10px;
-        /* Espacio superior */
     }
 
-    .formcontato__contacto{
+    .formcontato__contacto {
         padding: 40px;
     }
 
     .formcontato__img {
         display: block;
-        /* Mostrar la imagen en escritorio */
         max-width: 100%;
-        /* Limitar el tamaño de la imagen */
         height: auto;
-        /* Mantener la relación de aspecto */
     }
 
     .formcontato__contacto {
         display: flex;
-        /* Disposición en fila */
         flex-direction: row;
-        /* Orientación horizontal */
         align-items: center;
-        /* Alineación vertical */
         gap: 20px;
-        /* Espacio entre elementos */
         padding-right: 0;
     }
 
     .formcontato__text {
         flex: 1;
-        /* El texto y el formulario ocupan el resto del espacio */
     }
-    
-    .formcontato input, textarea, .formcontato button{
+
+    .formcontato input,
+    textarea,
+    .formcontato button {
         margin: 10px 0;
     }
 }
